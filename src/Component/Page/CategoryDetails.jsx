@@ -5,13 +5,13 @@ const CategoryDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [meals, setMeals] = useState([]);
-  const [visibleCount, setVisibleCount] = useState(8); // Initially visible meals
+  const [visibleCount, setVisibleCount] = useState(8); 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth); // Track screen width
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth); 
 
   useEffect(() => {
-    // Fetch meals by category
+  
     const fetchMeals = async () => {
       try {
         const response = await fetch(
@@ -29,19 +29,19 @@ const CategoryDetails = () => {
 
     fetchMeals();
 
-    // Update screen width on resize
+   
     const handleResize = () => setScreenWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
   }, [id]);
 
-  // Load more meals
+  
   const handleLoadMore = () => {
     setVisibleCount((prevCount) => prevCount + 8);
   };
 
-  // Handle image click for meal details
+  
   const handleImageClick = (mealId) => {
     navigate(`/recipe/${mealId}`);
 
@@ -50,13 +50,13 @@ const CategoryDetails = () => {
   if (loading) return <div style={styles.loaderContainer}><div className="spinner"></div></div>;
   if (error) return <div>Error: {error}</div>;
 
-  // Determine grid layout based on screen width
-  let gridTemplateColumns = 'repeat(4, 1fr)'; // Default grid for large screens
+
+  let gridTemplateColumns = 'repeat(4, 1fr)'; 
   if (screenWidth <= 768) {
-    gridTemplateColumns = 'repeat(2, 1fr)'; // For tablets and small screens
+    gridTemplateColumns = 'repeat(2, 1fr)'; 
   }
   if (screenWidth <= 480) {
-    gridTemplateColumns = '1fr'; // Single column for very small screens
+    gridTemplateColumns = '1fr'; 
   }
 
   return (
