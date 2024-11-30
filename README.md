@@ -60,6 +60,9 @@ This is a **React application** that fetches recipes from the MealDB API based o
 <img src="https://github.com/user-attachments/assets/747bb1df-8313-4975-b9c0-87199f7607b3" alt="Screenshot 1" height="300" width="400">
 <img src="https://github.com/user-attachments/assets/0ed5ac06-3f97-4492-9801-182436375042" alt="Screenshot 2" height="300" width="400">
 <img src="https://github.com/user-attachments/assets/add1db96-a657-43ee-a3a3-f8b9321286c2" alt="Screenshot 3" height="300" width="400">
+<img src="https://github.com/user-attachments/assets/9d8a7509-f951-4cb3-b5e0-549b70e70393" alt="Screenshot 4" height="300" width="400">
+
+
 
 
 
